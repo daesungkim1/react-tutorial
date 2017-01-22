@@ -1,5 +1,89 @@
+@charset "utf-8";
+button,fieldset,img {
+	border: 0
+}
+
+a:active,button {
+	background-color: transparent
+}
+
+blockquote,body,button,code,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,
+ol,p,pre,select,td,textarea,th,ul {
+	margin: 0;
+	padding: 0
+}
+
+.aside_g .list_ranking .tit_g,
+.aside_g .list_txt li {
+	white-space: nowrap;
+	text-overflow: ellipsis
+}
+
+dl,li,menu,ol,ul {
+	list-style: none
+}
+
+input::-ms-clear {
+	display: none
+}
+
+button {
+	cursor: pointer
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	min-width: 980px;
+	background: #fff
+}
+
+body,button,input,select,td,textarea,th {
+	font-size: 14px;
+	line-height: 1.5;
+	font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+	color: #333;
+	letter-spacing: -.05em
+}
+
+.screen_out {
+	line-height: 0;
+	text-indent: -9999px
+}
+
+a {
+	color: #333;
+	text-decoration: none
+}
+
+a:active,
+a:hover {
+	text-decoration: underline
+}
+
+a:hover {
+	color: #1e88e5
+}
+
+address,caption,cite,code,dfn,em,var {
+	font-style: normal;
+	font-weight: 400
+}
+
+body,html {
+	height: 100%
+}
+
+html {
+	overflow-y: scroll
+}
+
+.screen_out {
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	height: 0
 }
