@@ -180,6 +180,66 @@ const state = {
       type: '연예',
       rankByMostPopular: 10,
       visited: false
+    },
+    {
+      title: '[단독]최순실, 삼성에 이메일·문자 통해 "돈 더 내놔"..특검, 증거 확보',
+      type: '뉴스',
+      rankByMostPopular: 2,
+      visited: false
+    },
+    {
+      title: '차은택 "崔-고영태 내연관계로 추측..돈 때문에 만난듯"',
+      type: '뉴스',
+      rankByMostPopular: 1,
+      visited: false
+    },
+    {
+      title: '차은택 "崔-고영태 내연관계로 추측..돈 때문에 만난듯"',
+      type: '뉴스',
+      rankByMostPopular: 4,
+      visited: false
+    },
+    {
+      title: '헌재, 김기춘 등 6명 증인추가..탄핵심판 2월로 넘어간다',
+      type: '뉴스',
+      rankByMostPopular: 5,
+      visited: false
+    },
+    {
+      title: '조윤선의 눈물 "블랙리스트 존재는 알았지만.."6위',
+      type: '뉴스',
+      rankByMostPopular: 6,
+      visited: false
+    },
+    {
+      title: '10대 건설사 아파트 \'미분양·계약포기\' 속출',
+      type: '뉴스',
+      rankByMostPopular: 4,
+      visited: false
+    },
+    {
+      title: '김경진, 조윤선 전장관 \'이쁜 여동생\' 표현 구설 "잘못했다"',
+      type: '뉴스',
+      rankByMostPopular: 7,
+      visited: false
+    },
+    {
+      title: '유진룡 "블랙리스트 작성 시행, 김기춘 주도한 것"',
+      type: '뉴스',
+      rankByMostPopular: 8,
+      visited: false
+    },
+    {
+      title: '朴대통령측 "고영태 전과조회 해달라"..헌재 "부적절"',
+      type: '뉴스',
+      rankByMostPopular: 9,
+      visited: false
+    },
+    {
+      title: '\'4일간의 꿈\'..위조지폐 만들어 흥청망청 쓴 40대',
+      type: '뉴스',
+      rankByMostPopular: 10,
+      visited: false
     }
   ]
 }

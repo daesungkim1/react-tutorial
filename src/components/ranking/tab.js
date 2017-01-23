@@ -7,7 +7,9 @@ export default class RankingTab extends Component {
 
   render() {
     const element = this.props.isActive ?
-      <RankingTabBody /> : null; // null will be ignored
+      <RankingTabBody
+        name={this.props.name}
+        stories={this.props.stories} /> : null;
 
     return (
       <li className={this.props.isActive ? 'on' : null}>

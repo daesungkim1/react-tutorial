@@ -64,7 +64,8 @@ export default class Ranking extends Component {
                 name={item}
                 nth={(idx+1)}
                 isActive={item === activeTab}
-                onTabChange={this.onTabChange} />
+                onTabChange={this.onTabChange}
+                stories={this.state.stories} />
           )}
         </ul>
       </div>
