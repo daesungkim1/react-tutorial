@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import RankingTab from './tab'
+import state from '../../state'
 import './style.css'
 
 export default class Ranking extends Component {
@@ -10,18 +11,36 @@ export default class Ranking extends Component {
 
     // binding method
     // in ES6 you need to bind method on 'this'
-    this.onTabChange = this.onTabChange.bind(this);
+    this.onTabChange = this.onTabChange.bind(this)
 
-    // initial state lives here
-    this.state = {
-      activeTab : this.props.activeTab
-    }
+    // getStories doesn't required to bind 'this'
+  }
+
+  // lifecycle methods
+  //   this is called just before the render() method
+  //   good place to set initial state
+  componentWillMount() {
+    this.setState((prevState, props) => ({
+      activeTab: props.activeTab,
+      stories: this.getStories(props.activeTab, 'rankByMostPopular')
+    }))
+  }
+
+  getStories(type, by) {
+    let cnt = 0;
+
+    // filter and sorting stories array
+    // pagination is required later
+    return state.stories
+    .filter((obj) => obj.type === type && obj.visited !== true && cnt++ < 10)
+    .sort((a,b) => a[by] < b[by] ? -1 : a[by] > b[by] ? 1 : 0)
   }
 
   onTabChange(activeTab) {
-    // if this happens, react render component and
-    // sub-component again which are related.
-    this.setState({activeTab})
+    this.setState((prevState, props) => ({
+      activeTab: activeTab,
+      stories: this.getStories(activeTab, 'rankByMostPopular')
+    }))
   }
 
   render() {
