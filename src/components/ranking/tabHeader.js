@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class RankingTabHeader extends Component {
-  render() {
-    return (
-      <a
-        className={'link_tab link_tab' + this.props.nth}
-        onMouseOver={(e)=> {
-          /** it point to Ranking's onTabChange handler */
-          this.props.onTabChange(this.props.name)
-        }}
-        href="#none">
-        {this.props.name}
-      </a>
-    )
-  }
-}
+const RankingTabHeader = (props) => (
+  <a
+    className={'link_tab link_tab' + props.nth}
+    onMouseOver={(e)=> {
+      /** it points to the Ranking's onTabChange handler */
+      props.onTabChange(props.name)
+    }}
+    href="#none">
+    {props.name}
+  </a>
+)
+
+export default RankingTabHeader

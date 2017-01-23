@@ -1,28 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import RankingTabHeader from './tabHeader'
 import RankingTabBody from './tabBody'
 
-export default class RankingTab extends Component {
+const RankingTab = (props) => {
+  const element = props.isActive ?
+    <RankingTabBody
+      name={props.name}
+      stories={props.stories} /> : null;
 
-  render() {
-    const element = this.props.isActive ?
-      <RankingTabBody
-        name={this.props.name}
-        stories={this.props.stories} /> : null;
+  return (
+    <li className={props.isActive ? 'on' : null}>
+      <RankingTabHeader
+        nth={props.nth}
+        name={props.name}
 
-    return (
-      <li className={this.props.isActive ? 'on' : null}>
-        <RankingTabHeader
-          nth={this.props.nth}
-          name={this.props.name}
-
-          /**
-           * pass a reference of parent's handler
-           */
-          onTabChange={this.props.onTabChange} />
-        {element}
-      </li>
-    )
-  }
+        /**
+         * pass a reference of parent's handler
+         */
+        onTabChange={props.onTabChange} />
+      {element}
+    </li>
+  )
 }
+
+export default RankingTab
