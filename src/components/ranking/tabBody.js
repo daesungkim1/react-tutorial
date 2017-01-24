@@ -9,8 +9,8 @@ const RankingTabBody = (props) => (
         .map((obj,idx) =>
           <RankingTabItems
             {...obj}
-            key={idx}
-            nth={idx} />)}
+            key={idx+1}
+            nth={idx+1} />)}
     </ol>
     <div className="util_aside">
       <button className="btn_slide btn_prev"><span className="ico_news" >이전</span></button>

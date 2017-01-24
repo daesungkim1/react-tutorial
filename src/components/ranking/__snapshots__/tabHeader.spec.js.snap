@@ -1,0 +1,8 @@
+exports[`<RankingTabHeader /> render 1`] = `
+<a
+  className="link_tab link_tab3"
+  href="#none"
+  onMouseOver={[Function]}>
+  tab name here
+</a>
+`;
